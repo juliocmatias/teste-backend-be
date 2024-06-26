@@ -3,7 +3,7 @@ import IClient from '../../interfaces/clients/IClient';
 
 export default {
   up(queryInterface: QueryInterface) {
-    return queryInterface.createTable<Model<IClient>>('users', {
+    return queryInterface.createTable<Model<IClient>>('clients', {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -15,13 +15,13 @@ export default {
         allowNull: false,
       },
       cpf: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
     });
   },
 
   down(queryInterface: QueryInterface) {
-    return queryInterface.dropTable('users');
+    return queryInterface.dropTable('clients');
   },
 };
