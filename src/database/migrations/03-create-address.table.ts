@@ -1,6 +1,5 @@
 import { Model, QueryInterface, DataTypes } from 'sequelize';
 import IAddress from '../../interfaces/clients/IAddress';
-import { CallHierarchyIncomingCall } from '../../../node_modules/typescript/lib/typescript.d';
 
 export default {
   up(queryInterface: QueryInterface) {
