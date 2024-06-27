@@ -24,7 +24,7 @@ export default {
         allowNull: false,
       },
       zip: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       country: {
@@ -35,7 +35,6 @@ export default {
         type: DataTypes.INTEGER,
         allowNull: false,
         field: 'client_id',
-        primaryKey: true,
         references: {
           model: {
             tableName: 'clients',
@@ -44,6 +43,7 @@ export default {
         },
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
+        unique: true
       }
     });
   },
