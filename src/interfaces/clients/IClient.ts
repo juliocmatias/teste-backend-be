@@ -1,6 +1,6 @@
-import { Identifiable } from "..";
+import { Identifiable } from '..';
 
 export default interface IClient extends Identifiable {
   name: string,
-  cpf: number
+  taxId: string
 }

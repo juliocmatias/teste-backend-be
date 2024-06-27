@@ -14,8 +14,8 @@ export default {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      cpf: {
-        type: DataTypes.INTEGER,
+      taxId: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
     });
