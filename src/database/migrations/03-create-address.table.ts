@@ -1,5 +1,5 @@
 import { Model, QueryInterface, DataTypes } from 'sequelize';
-import IAddress from '../../interfaces/clients/IAddress';
+import { IAddress } from '@interfaces/clients';
 
 export default {
   up(queryInterface: QueryInterface) {

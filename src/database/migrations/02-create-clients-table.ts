@@ -1,5 +1,5 @@
 import { Model, QueryInterface, DataTypes } from 'sequelize';
-import IClient from '../../interfaces/clients/IClient';
+import { IClient } from '@interfaces/clients';
 
 export default {
   up(queryInterface: QueryInterface) {
