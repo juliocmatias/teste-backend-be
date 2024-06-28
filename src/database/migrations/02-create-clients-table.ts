@@ -17,6 +17,7 @@ export default {
       taxId: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: 'tax_id',
       },
     });
   },
