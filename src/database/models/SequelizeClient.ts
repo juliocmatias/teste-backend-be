@@ -7,15 +7,15 @@ import {
 } from 'sequelize';
 import db from '.';
 
-class SequelizeUser extends Model<InferAttributes<SequelizeUser>,
-  InferCreationAttributes<SequelizeUser>> {
+class SequelizeClient extends Model<InferAttributes<SequelizeClient>,
+  InferCreationAttributes<SequelizeClient>> {
   declare id: CreationOptional<number>;
 
   declare name: string;
   declare taxId: string;
 }
 
-SequelizeUser.init({
+SequelizeClient.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -37,4 +37,4 @@ SequelizeUser.init({
   underscored: true
 });
 
-export default SequelizeUser;
+export default SequelizeClient;
