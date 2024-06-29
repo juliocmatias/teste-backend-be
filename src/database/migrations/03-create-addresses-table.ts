@@ -3,7 +3,7 @@ import { IAddress } from '@interfaces/clients';
 
 export default {
   up(queryInterface: QueryInterface) {
-    return queryInterface.createTable<Model<IAddress>>('address', {
+    return queryInterface.createTable<Model<IAddress>>('addresses', {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -49,6 +49,6 @@ export default {
   },
 
   down(queryInterface: QueryInterface) {
-    return queryInterface.dropTable('address');
+    return queryInterface.dropTable('addresses');
   },
 };
