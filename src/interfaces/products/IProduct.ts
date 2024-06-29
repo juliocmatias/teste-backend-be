@@ -1,7 +1,7 @@
 import { Identifiable } from '..';
 
 export default interface IProduct extends Identifiable {
-  nome: string,
+  name: string,
   quantity: number,
   price: number,
   deleted: boolean
