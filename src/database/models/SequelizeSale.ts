@@ -6,6 +6,7 @@ import {
   CreationOptional,
 } from 'sequelize';
 import db from '.';
+import SequelizeProduct from './SequelizeProduct';
 
 class SequelizeSale extends Model<InferAttributes<SequelizeSale>,
   InferCreationAttributes<SequelizeSale>> {
@@ -60,5 +61,17 @@ SequelizeSale.init({
   timestamps: false,
   underscored: true
 });
+
+// relationship with the products table
+
+SequelizeSale.belongsTo(SequelizeProduct, {
+  foreignKey: 'productId',
+  as: 'product'
+})
+
+SequelizeProduct.hasMany(SequelizeSale, {
+  foreignKey: 'productId',
+  as: 'sales',
+})
 
 export default SequelizeSale;
