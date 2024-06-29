@@ -45,6 +45,7 @@ export default {
       totalPrice: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
+        field: 'total_price'
       },
       date: {
         type: DataTypes.DATE,
